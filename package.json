@@ -1,0 +1,66 @@
+{
+  "name": "electron_gui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Electron GUI",
+  "productName": "Electron GUI",
+  "author": {
+    "name": "Markus Klemm",
+    "email": "markus@markusklemm.net"
+  },
+  "cmake-js": {
+    "runtime": "electron",
+    "runtimeVersion": "6.0.2"
+  },
+  "homepage": "./",
+  "main": "init.js",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "devDependencies": {
+    "electron": "^6.0.2",
+    "electron-builder": "^21.2.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.3.2",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/lab": "^4.0.0-alpha.55",
+    "bindings": "^1.5.0",
+    "connected-react-router": "^6.5.2",
+    "electron-updater": "^4.1.2",
+    "history": "^4.9.0",
+    "jquery": "^3.4.1",
+    "spielwiese": "https://github.com/Superlokkus/spielwiese.git#napi",
+    "material-table": "^1.57.2",
+    "popper.js": "^1.14.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-katex": "^2.0.2",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "^3.4.1",
+    "react-table": "^6.10.0",
+    "redux": "^4.0.4",
+    "redux-actions": "^2.6.5",
+    "redux-localstorage": "^0.4.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "typeface-roboto": "^0.0.75"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "build electron .",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  }
+}
