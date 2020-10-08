@@ -9,9 +9,9 @@ import {ThemeProvider} from '@material-ui/styles';
 
 import routes from './routes';
 import configureStore from './store';
-
-
 import update from './actions/update';
+
+const spielwiese = window.require('spielwiese');
 
 const {ipcRenderer} = window.require('electron');
 
@@ -58,13 +58,14 @@ class App extends React.Component {
     };
 
     render() {
+        let answer = spielwiese.hello();
         return (
             <React.Fragment>
                 <CssBaseline/>
                 <ThemeProvider theme={theme}>
                     <Provider store={this.state.store}>
                         <ConnectedRouter history={this.state.routerHistory}>
-                            <h1>Hello</h1>
+                            <h1>Hello {answer}</h1>
                         </ConnectedRouter>
                     </Provider>
                 </ThemeProvider>
